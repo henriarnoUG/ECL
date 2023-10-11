@@ -12,7 +12,7 @@ The ECL dataset is a unique compilation of three existing data sources: **the ED
 The ECL dataset is as a single .csv file, where each row corresponds to a 10K filing. Such a filing is characterised by a company identifier (the *cik*, *gvkey*, or *company name*) and a date (the fiscal year end, corresponding to the *period_of_report* variable). When designing the dataset, we decided not to store the multimodal data in the ECL .csv file, but we opted to store pointers from a 10K record in ECL to the relevant records in the source datasets. This structure (1) allows users to extract the necessary variables easily with a limited computational burden and (2) ensures that we do not violate the terms of use of the proprietary CompuStat data.
 
 - A 10K record in our dataset maps to a textual record in the EDGAR-corpus via the variable *filename*. This variable represents the relative path to the JSON file in the corpus, which contains the textual data from the 10K filing.
-- A 10K record in our dataset maps to a record in the CompuStat dataset via the *gvkey* and *datadate* variables. These keys uniquely identify a record in CompuStat which contains the numerical and categorical financial data from the 10K filing.
+- A 10K record in our dataset maps to a record in the CompuStat dataset via the *gvkey* and *datadate* variables. These keys uniquely identify a record in CompuStat which contains the numerical financial data from the 10K filing.
 - All the relevant variables for the bankruptcy prediction task are included in our dataset and do not need to be extracted from the LoPucki BRD.
 
 **Schematically:**

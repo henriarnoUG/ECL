@@ -1,0 +1,7 @@
+data/
+ECL.csv
+update/edgar-crawler/datasets/
+update/.ipynb_checkpoints
+.ipynb_checkpoints
+update/__pycache__/
+__pycache__/
