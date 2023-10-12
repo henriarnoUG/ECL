@@ -50,7 +50,7 @@ git clone git@github.com:henriarnoUG/ECL.git
 cd ECL
 
 :: Create a new conda environment from requirements.txt file
-conda env create -f env.yml -y
+conda env create -f env.yml
 
 :: Activate the conda environment
 conda activate ECL
