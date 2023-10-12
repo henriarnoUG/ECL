@@ -1,18 +1,35 @@
+import pandas as pd
+import numpy as np
+import string
+
 from sklearn.impute import SimpleImputer
 from sklearn.preprocessing import StandardScaler, FunctionTransformer
-from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
 from sklearn.pipeline import Pipeline
 from sklearn.neural_network import MLPClassifier
 from imblearn.over_sampling import RandomOverSampler
 from sklearn.compose import ColumnTransformer
 from sklearn.ensemble import VotingClassifier
+from sklearn.model_selection import ParameterGrid
+from sklearn.metrics import (
+    average_precision_score,
+    roc_auc_score,
+    auc,
+    precision_recall_curve,
+    PrecisionRecallDisplay,
+    RocCurveDisplay,
+    roc_curve,
+)
+
 from matplotlib import pyplot as plt
-import pandas as pd
-import numpy as np
-from sklearn.metrics import average_precision_score, roc_auc_score, auc, precision_recall_curve, PrecisionRecallDisplay, RocCurveDisplay, roc_curve
-from matplotlib import pyplot as plt
+
 import xgboost as xgb
+
+from nltk.stem import WordNetLemmatizer
+import nltk
+from nltk.corpus import stopwords
+
 
 # Add custom function to compute CAP
 # source 1: https://www.geeksforgeeks.org/python-cap-cumulative-accuracy-profile-analysis/
