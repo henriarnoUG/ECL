@@ -30,6 +30,8 @@ You can access the ECL .csv file and the EDGAR-corpus (our updated version) at:
 ### Purpose of this Repository
 The purpose of this GitHub repository is to demonstrate the usage of the ECL dataset, with a particular focus on the main use case: next-year bankruptcy prediction. By utilizing the labels derived from the LoPucki BRD, we aim to develop models and techniques that can effectively predict bankruptcy based on the multimodal data contained in the 10K reports. We argue that the ECL dataset can also be used for other applications, not explored in this repository, such as investment decision making, financial risk management, ... and so on. 
 
+<img src="./images/task.PNG" alt="drawing" width="600" />
+
 In addition to providing code examples that showcase the utilization of the dataset, we also offer code for updating the dataset. This feature allows users to incorporate the most recent 10K filings in the dataset, ensuring that the analyses is based on the most up-to-date information available. The released version of the dataset contains information untill May 2023, bankruptcy labels are only available untill the end of 2022 and will not be updated.
 
 ### Repository Contents
