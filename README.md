@@ -38,7 +38,7 @@ In addition to providing code examples that showcase the utilization of the data
 **Dataset Update Code:** In the /update folder, you can find a Jupyter notebook (Dataset Update Code) for updating the ECL dataset with the most recent 10K filings from public companies. These resources enable users to keep their analyses in sync with the latest financial information. In this part of the repository we make use of EDGAR-crawler, an open-source GitHub repository that allows us to crawl and parse the textual data, which is added as a submodule (see below).
 
 ### Getting Started - Windows
-To get started, we suggest to clone the repository to your local machine. Then you can install some necessary dependencies via the **requirements.txt** file. Finally, you must add the edgar-crawler GitHub repository as a submodule to the update folder. You can do all of this by running the following commands if you are working on a Windows machine (from the location where you wish to store the code):
+To get started, we suggest to clone the repository to your local machine. Then you can install some (minimal) necessary dependencies via the **env.yml** file.  Note that the dependencies in the env.yml file are not sufficient to run the code in this repository, you might need to install additional dependencies! Finally, you must add the edgar-crawler GitHub repository as a submodule to the update folder. You can do all of this by running the following commands if you are working on a Windows machine (from the location where you wish to store the code).
 
 ```
 :: Navigate to the desired location to store the code and clone the repository
@@ -50,10 +50,10 @@ git clone git@github.com:henriarnoUG/ECL.git
 cd ECL
 
 :: Create a new conda environment from requirements.txt file
-conda create --name ECLenv --file requirements.txt -y
+conda env create -f env.yml -y
 
 :: Activate the conda environment
-conda activate ECLenv
+conda activate ECL
 ```
 
 ```
