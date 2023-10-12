@@ -102,8 +102,8 @@ def get_CompuStat_local (path, dataset, update):
     dataset['datadate'] = pd.to_datetime(dataset['datadate'], dayfirst=True)
     dataset['gvkey'] = dataset['gvkey'].astype(float)
     
-    # Adjust the datatypes of the variables that we will use to merge CompuStat records and ECL records.
-    local_comp = local_comp.drop(['cik', 'at'], axis=1)
+    # Drop duplicate column
+    local_comp = local_comp.drop('cik', axis=1)
 
     # Merge CompuStat and the ECL dataset.
     merged_dataset = dataset.merge(local_comp, on = ['gvkey', 'datadate'], how = 'left', indicator=True)
