@@ -3,9 +3,7 @@
 ### Introduction
 Welcome to the ECL GitHub repository! This repository contains the resources that show how to use, update and experiment with the ECL dataset. The dataset contains the multimodal (numerical and textual) data contained in corporate 10-K filings, and associated binary bankruptcy labels. For more details on the dataset and the experiments, see:
 
-```From Numbers to Words: Multi-Modal Bankruptcy Prediction Using the ECL Dataset (Arno et al., 2023)```
-
-**Complete citation will follow soon**
+```Henri Arno, Klaas Mulier, Joke Baeck, and Thomas Demeester. 2023. From Numbers to Words: Multi-Modal Bankruptcy Prediction Using the ECL Dataset. In Proceedings of the Sixth Workshop on Financial Technology and Natural Language Processing (FinNLP), Bali, Indonesia. Association for Computational Linguistics.```
 
 ### Data Sources
 The ECL dataset is a unique compilation of three existing data sources: **the EDGAR-corpus, CompuStat, and the LoPucki Bankruptcy Research Database (BRD)**. (1) The EDGAR-corpus is used to collect the textual data from corporate 10K filings, (2) CompuStat serves as our data source for the numerical financial data as reported in the 10Ks, while (3) the LoPucki BRD supplies the labels for the bankruptcy prediction task. Note that CompuStat requires a paid subscription, **therefore it is necessary to have access to CompuStat (via either a WRDS account or a local CompuStat copy) if you want to access the numerical financial data. If you are only interested in the textual data, then you do not need access to CompuStat, and hence do not need a subscription.**
@@ -24,7 +22,9 @@ The ECL dataset is as a single .csv file, where each row corresponds to a 10K fi
 
 You can access the ECL .csv file and the EDGAR-corpus (our updated version) at:
 
-```... pointers to the datasets will follow soon ...```
+```ECL: https://cloud.ilabt.imec.be/index.php/s/TFGZgF3EyS4jsz2```
+
+```ECL-Text: Will follow soon ```
 
 
 ### Purpose of this Repository
@@ -71,9 +71,7 @@ We encourage collaboration and welcome contributions to enhance the dataset and 
 ### Citation
 If you use the ECL dataset or code from this repository in your research or projects, please consider citing it as:
 
-```From Numbers to Words: Multi-Modal Bankruptcy Prediction Using the ECL Dataset (Arno et al., 2023)```
-
-**Complete citation will follow soon**
+```Henri Arno, Klaas Mulier, Joke Baeck, and Thomas Demeester. 2023. From Numbers to Words: Multi-Modal Bankruptcy Prediction Using the ECL Dataset. In Proceedings of the Sixth Workshop on Financial Technology and Natural Language Processing (FinNLP), Bali, Indonesia. Association for Computational Linguistics.```
 
 ### References
 
