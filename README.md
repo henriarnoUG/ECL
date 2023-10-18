@@ -26,7 +26,7 @@ You can access the ECL .csv file and the EDGAR-corpus (our updated version) at:
 
 ```ECL: https://cloud.ilabt.imec.be/index.php/s/TFGZgF3EyS4jsz2```
 
-```ECL-Text: Will follow soon ```
+```ECL-Text: https://cloud.ilabt.imec.be/index.php/s/yrQneXG74bNYxLp ```
 
 
 ### Purpose of this Repository
