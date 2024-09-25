@@ -2,7 +2,7 @@
 
 This repository can be used to:
 1. Reconstruct the ECL (Edgar-CompuStat-Lopucki) benchmark dataset from (Arno et al., 2023).
-2. Run the baseline models for business failure prediction from (Arno et al., 2023).
+2. Run the baseline models for business failure prediction from (Arno et al., 2022).
 3. Build the sentence-attention model for business failure prediction from (Arno et al., 2024).
 
 ##### Reconstruct ECL
@@ -20,6 +20,8 @@ The code to run the baseline models for the next-year business failure predictio
 The code to build the sentence-attention models can be found in ```/sentence-attention/``` folder.
 
 ##### References
+[Next-Year Bankruptcy Prediction from Textual Data: Benchmark and Baselines](https://scholar.google.be/citations?user=ce8BmFgAAAAJ&hl=nl) (Arno et al., 2022)
+
 [From Numbers to Words: Multi-Modal Bankruptcy Prediction Using the ECL Dataset](https://scholar.google.be/citations?user=ce8BmFgAAAAJ&hl=nl) (Arno et al., 2023)
 
 [The Numbers and Narrative of Bankruptcy: Interpretable Multi-Modal Business Failure Prediction](https://scholar.google.be/citations?user=ce8BmFgAAAAJ&hl=nl) (Arno et al., 2024) (forthcoming)
