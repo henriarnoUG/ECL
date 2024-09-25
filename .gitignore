@@ -4,3 +4,5 @@ ECL.csv
 __pycache__/
 baselines/__pycache__/
 baselines/.ipynb_checkpoints
+sentence-attention/__pycache__/
+sentence-attention/.ipynb_checkpoints
