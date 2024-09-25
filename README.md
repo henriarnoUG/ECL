@@ -12,7 +12,7 @@ In the ECL csv-file, which is accesible [here](https://cloud.ilabt.imec.be/index
 
 ##### Baseline models for business failure prediction
 
-The code to run the baseline models for the next-year business failure prediction task can be found in ```/baselines/``` folder.
+The code to run the baseline models for the next-year business failure prediction task can be found in the ```/baselines/``` folder.
 
 ##### References
 [Next-Year Bankruptcy Prediction from Textual Data: Benchmark and Baselines](https://scholar.google.be/citations?user=ce8BmFgAAAAJ&hl=nl) (Arno et al., 2022)
