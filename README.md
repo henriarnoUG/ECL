@@ -13,7 +13,7 @@ In the master CSV-file, which is accesible [here](https://cloud.ilabt.imec.be/in
 
 ##### Baseline models for business failure prediction
 
-The code to run the baseline models for the next-year business failure prediction task can be found in ```/models/``` folder.
+The code to run the baseline models for the next-year business failure prediction task can be found in ```/baselines/``` folder.
 
 ##### Sentence-attention model
 
