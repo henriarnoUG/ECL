@@ -1,9 +1,9 @@
-# general
+# general imports
 import numpy as np
 import pandas as pd
 import math
 
-# torch
+# torch imports
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -13,28 +13,46 @@ from torch.utils.data import DataLoader, Dataset
 class SentenceDataset(Dataset):
     
     def __init__(self, dataframe):
-        # store data and retain original indices for post-processing
+        
+        """
+        Args:
+            dataframe (pd.DataFrame): ECL dataset as a dataframe (does need to be matched with Compustat data)
+        """
+        
         self.data = dataframe.reset_index(drop=False)
-        # store numerical predictors in list
-        self.predictors = ['actlct','apsale','cashat','chat','chlct','ebit_dp_at','ebitat','ebitsale','fat','invchinvt','invtsale','lct_ch_at','lctat','lctlt','lctsale','ltat',
-                           'log_at','log_sale','niat','nisale','oiadpat','oiadpsale','qalct','reat','relct','saleat','seqat','wcapat']
+        self.predictors = ['actlct','apsale','cashat','chat','chlct','ebit_dp_at','ebitat','ebitsale','fat','invchinvt','invtsale','lct_ch_at','lctat','lctlt','lctsale','ltat', 'log_at','log_sale','niat','nisale','oiadpat','oiadpsale','qalct','reat','relct','saleat','seqat','wcapat']
 
 
     def __len__(self):
+        
+        """
+        Returns:
+            int: number of samples in the dataset
+        """
+        
             return len(self.data)
 
     def __getitem__(self, idx):
+        
+        """
+        Args:
+            idx (int): idx of the sample to retrieve
 
-        # path to embedding and mask
+        Returns:
+            dict: dictionary containing 'sentence_embeddings', 'sentence_masks', 'structured_features', 'labels' and 'idx' 
+            (original indices for post-processing) of retrieved sample
+        """
+
+        # store path to embeddings and masks on disk - see embedding_demo.ipynb
+        # change path to appropriate location
         text_path = self.data.iloc[idx]['filename'].replace('.txt', '.npy')
         embedding_path = text_path.replace('/raw_corpus/', '/embeddings/')
         mask_path = text_path.replace('/raw_corpus/', '/masks/')
 
-        # get the stored embeddings and masks
-        #embeddings = torch.tensor(np.load(embedding_path), dtype=torch.float)
-        #masks = torch.tensor(np.load(mask_path), dtype=torch.float)
-        embeddings = torch.zeros((500, 384))
-        masks = torch.zeros((500))
+        # load
+        embeddings = torch.tensor(np.load(embedding_path), dtype=torch.float)
+        masks = torch.tensor(np.load(mask_path), dtype=torch.float)
+        
 
         # get the structured features
         features = self.data.iloc[idx][self.predictors]
@@ -57,7 +75,18 @@ class SentenceDataset(Dataset):
 
 
 def scaled_dot_product_attention(query, key, value, masks) -> torch.Tensor:
-    # adapted from https://pytorch.org/docs/stable/generated/torch.nn.functional.scaled_dot_product_attention.html
+    """
+    adapted from https://pytorch.org/docs/stable/generated/torch.nn.functional.scaled_dot_product_attention.html
+
+    Args:
+        query (torch.tensor): representation of structured features
+        key (torch.tensor): representation of sentence embeddings to compare to query
+        value (torch.tensor): representation of sentence embeddings to transform into document representation
+        masks (torch.tensor): mask that indicates which sentences were padded and do not take part in attention operation
+    Returns:
+        weighted_value (torch.tensor): attention weighted value tensors
+        attn_weight (torch.tensor): attention weights
+    """
 
     # set scaling factor
     hidden_dim = query.size(-1)
@@ -82,14 +111,22 @@ def scaled_dot_product_attention(query, key, value, masks) -> torch.Tensor:
 
 
 
-class SentenceAttentionNetwork(nn.Module):
+class SentenceAttentionNetwork(nn.Module):  
+    
     def __init__(self, embedding_dim=384, feature_dim=28, hidden_dim=32):
         super().__init__()
+        
+        """
+        Args:
+            embedding_dim (int): dimension of sentence embeddings
+            feature_dim (int): dimension of structured features
+            hidden_dim (int): dimension of query, key and value representations
+        """
 
         # linear map for structured features
         self.linear_map = nn.Linear(feature_dim, hidden_dim)
 
-        # initialise trainable tensor
+        # trainable tensor
         self.trainable = nn.Parameter(torch.randn(1, embedding_dim))
 
         # linear map for embeddings to key and value matrices
@@ -101,6 +138,16 @@ class SentenceAttentionNetwork(nn.Module):
 
 
     def forward(self, embeddings, masks, features):
+        
+        """
+        Args:
+            embeddings (torch.tensor): sentence embeddings
+            masks (torch.tensor): sentence masks
+            features (torch.tensor): structured features
+        Returns:
+            logits (torch.tensor): raw logits for positive class
+            attn_weight (torch.tensor): attention weights of sentences (including on trainable tensor)
+        """
 
         # store dimensions
         batch_size, sentences, embedding_dim = embeddings.shape
