@@ -6,10 +6,10 @@ from torch.utils.tensorboard import SummaryWriter
 
         
 class CustomDataset(Dataset):
-  
+ 
+    
     
     def __init__(self, dataframe, tokenizer, path_corpus):
-        
         """
         Args:
             dataframe (pd.DataFrame): ECL dataset as a dataframe (does not need to be matched with Compustat data)
@@ -22,8 +22,10 @@ class CustomDataset(Dataset):
         self.path_corpus = path_corpus
         
 
-    def __len__(self):
         
+        
+        
+    def __len__(self):
         """
         Returns:
             int: number of samples in the dataset
@@ -32,9 +34,10 @@ class CustomDataset(Dataset):
         return len(self.data)
     
     
+    
+    
 
     def __getitem__(self, idx):
-        
         """
         Args:
             idx (int): idx of the sample to retrieve

@@ -12,8 +12,10 @@ from torch.utils.data import DataLoader, Dataset
 
 class SentenceDataset(Dataset):
     
+    
+    
+    
     def __init__(self, dataframe):
-        
         """
         Args:
             dataframe (pd.DataFrame): ECL dataset as a dataframe (does need to be matched with Compustat data)
@@ -22,18 +24,22 @@ class SentenceDataset(Dataset):
         self.data = dataframe.reset_index(drop=False)
         self.predictors = ['actlct','apsale','cashat','chat','chlct','ebit_dp_at','ebitat','ebitsale','fat','invchinvt','invtsale','lct_ch_at','lctat','lctlt','lctsale','ltat', 'log_at','log_sale','niat','nisale','oiadpat','oiadpsale','qalct','reat','relct','saleat','seqat','wcapat']
 
+        
+        
+        
 
     def __len__(self):
-        
         """
         Returns:
             int: number of samples in the dataset
         """
         
-            return len(self.data)
+        return len(self.data)
 
-    def __getitem__(self, idx):
         
+        
+        
+    def __getitem__(self, idx):
         """
         Args:
             idx (int): idx of the sample to retrieve
@@ -72,6 +78,10 @@ class SentenceDataset(Dataset):
             'labels': labels,
             'idx': original_ids}
 
+    
+    
+    
+    
 
 
 def scaled_dot_product_attention(query, key, value, masks) -> torch.Tensor:
@@ -111,11 +121,18 @@ def scaled_dot_product_attention(query, key, value, masks) -> torch.Tensor:
 
 
 
+
+
+
+
+
 class SentenceAttentionNetwork(nn.Module):  
+    
+  
+    
     
     def __init__(self, embedding_dim=384, feature_dim=28, hidden_dim=32):
         super().__init__()
-        
         """
         Args:
             embedding_dim (int): dimension of sentence embeddings
@@ -137,8 +154,12 @@ class SentenceAttentionNetwork(nn.Module):
         self.classification = nn.Linear(hidden_dim*2, 1)
 
 
-    def forward(self, embeddings, masks, features):
         
+        
+        
+        
+        
+    def forward(self, embeddings, masks, features):
         """
         Args:
             embeddings (torch.tensor): sentence embeddings

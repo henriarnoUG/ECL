@@ -52,7 +52,6 @@ def compustat_wrds(variables, dataset, db):
 
 
 def compustat_local (path, dataset, update):
-    
     """
     Args:
         path (str): path to local compustat .csv file.

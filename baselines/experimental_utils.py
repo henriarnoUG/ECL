@@ -1,4 +1,3 @@
-
 # general imports
 import pandas as pd
 import numpy as np
@@ -34,7 +33,6 @@ from sklearn.metrics import (
 
 
 def compute_cap_recall (labels, predictions, k, verbose=False):
-    
     """
     Args:
         labels (list): true labels
@@ -94,8 +92,9 @@ def compute_cap_recall (labels, predictions, k, verbose=False):
 
 
 
+
+
 def evaluate(labels, predictions):
-    
     """
     Args:
         labels (list): true labels
@@ -118,8 +117,9 @@ def evaluate(labels, predictions):
           
         
 
+        
+        
 def tokenize_lemmatize(text):
-    
     """
     Args:
         text (string): text to process 
@@ -139,8 +139,10 @@ def tokenize_lemmatize(text):
 
 
 
+
+
+
 def remove_stop_punct_num(tokenized_text):
-    
     """
     Args:
         tokenized_text (list): tokens
