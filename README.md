@@ -17,7 +17,7 @@ The code to run the baseline models for the next-year business failure predictio
 
 ##### Sentence-attention model
 
-The code to build the sentence-attention models can be found in ```/sentence-attention/``` folder.
+The code to build the sentence-attention model can be found in ```/sentence-attention/``` folder.
 
 ##### References
 [Next-Year Bankruptcy Prediction from Textual Data: Benchmark and Baselines](https://scholar.google.be/citations?user=ce8BmFgAAAAJ&hl=nl) (Arno et al., 2022)
