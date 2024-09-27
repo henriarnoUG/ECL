@@ -66,7 +66,7 @@ class SentenceDataset(Dataset):
         features = torch.tensor(features, dtype=torch.float)
 
         # get the labels
-        labels = torch.tensor(int(self.data.iloc[idx]['label']), dtype=torch.float)
+        labels = torch.tensor(int(self.data.iloc[idx]['label']), dtype=torch.long)
 
         # get the original indices
         original_ids = self.data.iloc[idx]['index']
@@ -151,7 +151,7 @@ class SentenceAttentionNetwork(nn.Module):
         self.value_layer = nn.Linear(embedding_dim, hidden_dim)
 
         # classification layer
-        self.classification = nn.Linear(hidden_dim*2, 1)
+        self.classification = nn.Linear(hidden_dim*2, 2)
 
 
         
