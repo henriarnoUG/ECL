@@ -1,7 +1,7 @@
 # Hyperparameter optimisation procedure
 
 #### Overview
-In this document, we describe the hyperparameter optimisation procedure from (Arno et al., 2024) applied to all next-year business failure prediction models. The 10K filings from the ECL benchmark dataset are split into training, validation, and test sets using a temporal split (i.e., based on the filing year). For each model, hyperparameters are selected to maximize the ROC-AUC on the validation set. After tuning, the models are retrained on the combined training and validation sets and then evaluated on the test set. Below, we provide tables detailing the pre-processing steps, the explored hyperparameters, and the optimization strategy for each model.
+In this document, we describe the hyperparameter optimisation procedure from (Arno et al., 2025) applied to all next-year business failure prediction models. The 10K filings from the ECL benchmark dataset are split into training, validation, and test sets using a temporal split (i.e., based on the filing year). For each model, hyperparameters are selected to maximize the ROC-AUC on the validation set. After tuning, the models are retrained on the combined training and validation sets and then evaluated on the test set. Below, we provide tables detailing the pre-processing steps, the explored hyperparameters, and the optimization strategy for each model.
 
 #### Numerical models 
 
