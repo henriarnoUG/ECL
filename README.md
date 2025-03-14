@@ -3,7 +3,7 @@
 This repository can be used to:
 1. Reconstruct the ECL (Edgar-CompuStat-Lopucki) benchmark dataset from (Arno et al., 2023).
 2. Run the baseline models for business failure prediction from (Arno et al., 2023).
-3. Build the sentence-attention model for business failure prediction from (Arno et al., 2024).
+3. Build the sentence-attention model for business failure prediction from (Arno et al., 2025).
 
 ##### Reconstruct ECL
 
@@ -24,6 +24,6 @@ The code to build the sentence-attention model from (Arno et al., 2024) can be f
 
 [From Numbers to Words: Multi-Modal Bankruptcy Prediction Using the ECL Dataset](https://scholar.google.be/citations?user=ce8BmFgAAAAJ&hl=nl) (Arno et al., 2023)
 
-[The Numbers and Narrative of Bankruptcy: Interpretable Multi-Modal Business Failure Prediction](https://scholar.google.be/citations?user=ce8BmFgAAAAJ&hl=nl) (Arno et al., 2024) [forthcoming]
+[The Numbers and Narrative of Bankruptcy: Interpretable Multi-Modal Business Failure Prediction](https://scholar.google.be/citations?user=ce8BmFgAAAAJ&hl=nl) (Arno et al., 2025)
 
 [EDGAR-CORPUS: Billions of Tokens Make The World Go Round](https://aclanthology.org/2021.econlp-1.2/) (Loukas et al., 2021)
