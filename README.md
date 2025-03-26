@@ -24,6 +24,6 @@ The code to build the sentence-attention model from (Arno et al., 2025) can be f
 
 [From Numbers to Words: Multi-Modal Bankruptcy Prediction Using the ECL Dataset](https://scholar.google.be/citations?user=ce8BmFgAAAAJ&hl=nl) (Arno et al., 2023)
 
-[The Numbers and Narrative of Bankruptcy: Interpretable Multi-Modal Business Failure Prediction](https://scholar.google.be/citations?user=ce8BmFgAAAAJ&hl=nl) (Arno et al., 2025)
+[Business Failure Prediction From Textual and Tabular Data With Sentence-Level Interpretations](https://scholar.google.be/citations?user=ce8BmFgAAAAJ&hl=nl) (Arno et al., 2025)
 
 [EDGAR-CORPUS: Billions of Tokens Make The World Go Round](https://aclanthology.org/2021.econlp-1.2/) (Loukas et al., 2021)
