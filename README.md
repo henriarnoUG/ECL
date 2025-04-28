@@ -20,10 +20,10 @@ The code to run the baseline models for the next-year business failure predictio
 The code to build the sentence-attention model from (Arno et al., 2025) can be found in the ```/sentence-attention/``` folder.
 
 ##### References
-[Next-Year Bankruptcy Prediction from Textual Data: Benchmark and Baselines](https://scholar.google.be/citations?user=ce8BmFgAAAAJ&hl=nl) (Arno et al., 2022)
+[Business Failure Prediction From Textual and Tabular Data With Sentence-Level Interpretations](https://link.springer.com/article/10.1007/s10479-025-06574-z) (Arno et al., 2025)
 
-[From Numbers to Words: Multi-Modal Bankruptcy Prediction Using the ECL Dataset](https://scholar.google.be/citations?user=ce8BmFgAAAAJ&hl=nl) (Arno et al., 2023)
+[From Numbers to Words: Multi-Modal Bankruptcy Prediction Using the ECL Dataset](https://aclanthology.org/2023.finnlp-2.2/) (Arno et al., 2023)
 
-[Business Failure Prediction From Textual and Tabular Data With Sentence-Level Interpretations](https://scholar.google.be/citations?user=ce8BmFgAAAAJ&hl=nl) (Arno et al., 2025)
+[Next-Year Bankruptcy Prediction from Textual Data: Benchmark and Baselines](https://aclanthology.org/2022.finnlp-1.25/) (Arno et al., 2022)
 
 [EDGAR-CORPUS: Billions of Tokens Make The World Go Round](https://aclanthology.org/2021.econlp-1.2/) (Loukas et al., 2021)
